@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+            body {
+                background-image: url(" {%static "images/bgimage.jpeg" %}"); 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover; 
+                height: 450px;
+            }
+            h1 {
+                color: yellow;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 50px;
+                font-weight: bold;
+                margin-top: 0px;
+                margin-bottom: 1px;
+                
+            }
+            h3 {
+                color: yellow;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 0px;
+                margin-bottom: 1px;
+            }
+    </style>
+
+
+</head>
+<body>
+    <h1> Welcome</h1>
+    
+    <h3> Welcome to our website. Please enter the necessary details to study the product behaviour</h3>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <form method="post">
+            
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
